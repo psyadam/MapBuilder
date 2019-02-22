@@ -1,0 +1,50 @@
+This document gives a brief overview of the dependiences of each "pieces" of MPMA.  The various subdirectories here each contain a distinct "piece" of MPMA.  Some "pieces" require that another "piece" be present.
+
+Note that all components are automatically initialized/cleaned up when you initialize/cleanup the base MPMA.
+
+-- base -- Basic O/S Wrappers --
+linux libs: pthread, rt
+windows libs: dbghelp.lib
+(optional, makes backtraces better) gcc option: rdynamic
+
+-- geo -- Geometry/Math library --
+pieces: base
+
+-- net -- Network library --
+pieces: base
+linux libs: (none?)
+windows libs: Ws2_32.lib
+
+-- gfxsetup -- Window and Graphics(OpenGL) Setup --
+pieces: base
+linux libs: X11 GL GLU
+windows libs: opengl32.lib glu32.lib
+
+-- gfx -- OpenGL Object Wrappers --
+pieces: base, gfxsetup
+(optional for ImageMagic file loading) linux libs: Magick++
+(optional for ImageMagic file loading) windows libs: --For release-- CORE_RL_bzlib_.lib CORE_RL_coders_.lib CORE_RL_filters_.lib CORE_RL_jbig_.lib CORE_RL_jp2_.lib CORE_RL_jpeg_.lib CORE_RL_lcms_.lib CORE_RL_libxml_.lib CORE_RL_magick_.lib CORE_RL_Magick++_.lib CORE_RL_png_.lib CORE_RL_tiff_.lib CORE_RL_ttf_.lib CORE_RL_wand_.lib CORE_RL_wmf_.lib CORE_RL_xlib_.lib CORE_RL_zlib_.lib  --For debug-- CORE_DB_bzlib_.lib CORE_DB_coders_.lib CORE_DB_filters_.lib CORE_DB_jbig_.lib CORE_DB_jp2_.lib CORE_DB_jpeg_.lib CORE_DB_lcms_.lib CORE_DB_libxml_.lib CORE_DB_magick_.lib CORE_DB_Magick++_.lib CORE_DB_png_.lib CORE_DB_tiff_.lib CORE_DB_ttf_.lib CORE_DB_wand_.lib CORE_DB_wmf_.lib CORE_DB_xlib_.lib CORE_DB_zlib_.lib
+
+-- input -- User Input Library --
+pieces: base, gfxsetup
+(optional for gamepad input on windows) windows libs: DInput8.lib
+
+-- vr -- Virtual Reality Library --
+pieces: base, gfxsetup, gfx, geo
+linux libs: OVR?
+windows libs: libovr.lib or libovr64.lib
+
+-- audio -- Audio Library --
+pieces: base
+linux libs: openal
+(optional for audio files) linux libs: vorbisfile vorbisenc FLAC++ opusfile opusenc
+windows libs: OpenAL32.lib
+(optional for audio files) windows libs: vorbisfile.lib vorbis.lib ogg.lib libFLAC++.lib libFLAC.lib opusfile.lib opus.lib
+
+---------------------------
+
+Notes for setting up Visual Studio:
+- Ensure that the "Character Set" in the project options is set to "Use Multi-Byte Character Set".
+- Ensure the root directory that contains mpma's various code components is in the include path.
+- Suggest defining _CRT_SECURE_NO_WARNINGS for the preprocessor.
+

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{AAB83C57-8413-4125-A292-076D30906193}</ProjectGuid>
+    <RootNamespace>Framework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>E:\Mpma\mpma\mpma_dependent_libs\include;E:\Mpma\mpma\code\ft291\freetype-2.9.1\include;C:\Program Files %28x86%29\Windows Kits\10\Include\10.0.17763.0\um;E:\Mpma\mpma\code\FreeImage3180Win32Win64\FreeImage\Dist\x32;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Mpma\mpma\mpma_dependent_libs\lib\32bit;E:\Mpma\mpma\code\ft291\freetype-2.9.1\objs\Win32\Debug;E:\Mpma\mpma\code\FreeImage3180\FreeImage\Dist\x32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>E:\Mpma\mpma\mpma_dependent_libs\include;E:\Mpma\mpma\code\FreeImage3180Win32Win64\FreeImage\Dist\x64;E:\Mpma\mpma\code\ft291\freetype-2.9.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Mpma\mpma\mpma_dependent_libs\lib\64bit;E:\Mpma\mpma\code\FreeImage3180Win32Win64\FreeImage\Dist\x64;E:\Mpma\mpma\code\ft291\freetype-2.9.1\objs\x64\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>FreeImage.lib;dbghelp.lib;Opengl32.lib;Glu32.lib;freetype.lib;dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>FreeImage.lib;dbghelp.lib;Opengl32.lib;Glu32.lib;freetype.lib;dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\code\audio\AL_Include.h" />
+    <ClInclude Include="..\..\code\audio\AL_LockedCalls.h" />
+    <ClInclude Include="..\..\code\audio\Listener.h" />
+    <ClInclude Include="..\..\code\audio\Player.h" />
+    <ClInclude Include="..\..\code\audio\SaveToFile.h" />
+    <ClInclude Include="..\..\code\audio\Source.h" />
+    <ClInclude Include="..\..\code\base\Debug.h" />
+    <ClInclude Include="..\..\code\base\DebugRouter.h" />
+    <ClInclude Include="..\..\code\base\File.h" />
+    <ClInclude Include="..\..\code\base\Info.h" />
+    <ClInclude Include="..\..\code\base\Locks.h" />
+    <ClInclude Include="..\..\code\base\Memory.h" />
+    <ClInclude Include="..\..\code\base\MiscStuff.h" />
+    <ClInclude Include="..\..\code\base\Profiler.h" />
+    <ClInclude Include="..\..\code\base\ReferenceCount.h" />
+    <ClInclude Include="..\..\code\base\Thread.h" />
+    <ClInclude Include="..\..\code\base\ThreadedTask.h" />
+    <ClInclude Include="..\..\code\base\Timer.h" />
+    <ClInclude Include="..\..\code\base\Types.h" />
+    <ClInclude Include="..\..\code\base\Vary.h" />
+    <ClInclude Include="..\..\code\base\win32\alt_windows.h" />
+    <ClInclude Include="..\..\code\base\win32\evil_windows.h" />
+    <ClInclude Include="..\..\code\base\win32\LocksWin32.h" />
+    <ClInclude Include="..\..\code\Config.h" />
+    <ClInclude Include="..\..\code\FreeImage3180\FreeImage\Source\FreeImage.h" />
+    <ClInclude Include="..\..\code\geo\Geo.h" />
+    <ClInclude Include="..\..\code\geo\GeoBases.h" />
+    <ClInclude Include="..\..\code\geo\GeoInterpolators.h" />
+    <ClInclude Include="..\..\code\geo\GeoIntersect.h" />
+    <ClInclude Include="..\..\code\geo\GeoObjects.h" />
+    <ClInclude Include="..\..\code\gfxsetup\Extensions.h" />
+    <ClInclude Include="..\..\code\gfxsetup\GFXSetup.h" />
+    <ClInclude Include="..\..\code\gfxsetup\GL.h" />
+    <ClInclude Include="..\..\code\gfx\Framebuffer.h" />
+    <ClInclude Include="..\..\code\gfx\Shader.h" />
+    <ClInclude Include="..\..\code\gfx\Texture.h" />
+    <ClInclude Include="..\..\code\gfx\TextWriter.h" />
+    <ClInclude Include="..\..\code\gfx\Vertex.h" />
+    <ClInclude Include="..\..\code\input\GameDevice.h" />
+    <ClInclude Include="..\..\code\input\Keyboard.h" />
+    <ClInclude Include="..\..\code\input\Mouse.h" />
+    <ClInclude Include="..\..\code\input\Unified.h" />
+    <ClInclude Include="..\..\code\input\win32\WrapDInput.h" />
+    <ClInclude Include="..\..\code\net\Common.h" />
+    <ClInclude Include="..\..\code\net\PlatformSockets.h" />
+    <ClInclude Include="..\..\code\net\TCP.h" />
+    <ClInclude Include="..\..\code\net\UDP.h" />
+    <ClInclude Include="..\..\code\net\UPNP.h" />
+    <ClInclude Include="..\..\code\Setup.h" />
+    <ClInclude Include="main.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\code\audio\AudioSetup.cpp" />
+    <ClCompile Include="..\..\code\audio\Listener.cpp" />
+    <ClCompile Include="..\..\code\audio\Player.cpp" />
+    <ClCompile Include="..\..\code\audio\SaveToFile.cpp" />
+    <ClCompile Include="..\..\code\audio\Source.cpp" />
+    <ClCompile Include="..\..\code\base\DebugRouter.cpp" />
+    <ClCompile Include="..\..\code\base\File.cpp" />
+    <ClCompile Include="..\..\code\base\Info.cpp" />
+    <ClCompile Include="..\..\code\base\Locks.cpp" />
+    <ClCompile Include="..\..\code\base\Memory.cpp" />
+    <ClCompile Include="..\..\code\base\MiscStuff.cpp" />
+    <ClCompile Include="..\..\code\base\Profiler.cpp" />
+    <ClCompile Include="..\..\code\base\ReferenceCount.cpp" />
+    <ClCompile Include="..\..\code\base\Thread.cpp" />
+    <ClCompile Include="..\..\code\base\ThreadedTask.cpp" />
+    <ClCompile Include="..\..\code\base\Vary.cpp" />
+    <ClCompile Include="..\..\code\base\win32\Debug.cpp" />
+    <ClCompile Include="..\..\code\base\win32\FileWin32.cpp" />
+    <ClCompile Include="..\..\code\base\win32\InfoWin32.cpp" />
+    <ClCompile Include="..\..\code\base\win32\LocksWin32.cpp" />
+    <ClCompile Include="..\..\code\base\win32\ThreadWin32.cpp" />
+    <ClCompile Include="..\..\code\base\win32\Timer.cpp" />
+    <ClCompile Include="..\..\code\geo\Geo.cpp" />
+    <ClCompile Include="..\..\code\geo\GeoIntersect.cpp" />
+    <ClCompile Include="..\..\code\gfxsetup\Extensions.cpp" />
+    <ClCompile Include="..\..\code\gfxsetup\GL.cpp" />
+    <ClCompile Include="..\..\code\gfxsetup\win32\ExtensionsWin32.cpp" />
+    <ClCompile Include="..\..\code\gfxsetup\win32\GFXSetupWin32.cpp" />
+    <ClCompile Include="..\..\code\gfx\Framebuffer.cpp" />
+    <ClCompile Include="..\..\code\gfx\Shader.cpp" />
+    <ClCompile Include="..\..\code\gfx\Texture.cpp" />
+    <ClCompile Include="..\..\code\gfx\TextWriter.cpp" />
+    <ClCompile Include="..\..\code\gfx\Vertex.cpp" />
+    <ClCompile Include="..\..\code\input\GameDevice.cpp" />
+    <ClCompile Include="..\..\code\input\Keyboard.cpp" />
+    <ClCompile Include="..\..\code\input\Mouse.cpp" />
+    <ClCompile Include="..\..\code\input\Unified.cpp" />
+    <ClCompile Include="..\..\code\input\win32\GameDeviceWin.cpp" />
+    <ClCompile Include="..\..\code\input\win32\KeyboardWin32.cpp" />
+    <ClCompile Include="..\..\code\input\win32\MouseWin32.cpp" />
+    <ClCompile Include="..\..\code\input\win32\WrapDInput.cpp" />
+    <ClCompile Include="..\..\code\net\Common.cpp" />
+    <ClCompile Include="..\..\code\net\TCP.cpp" />
+    <ClCompile Include="..\..\code\net\UDP.cpp" />
+    <ClCompile Include="..\..\code\net\UPNP.cpp" />
+    <ClCompile Include="..\..\code\Setup.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="winmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\code\FreeImage3180Win32Win64\FreeImage\Dist\x64\FreeImage.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
