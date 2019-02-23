@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SdkRoot>$(SolutionDir)\sdk</SdkRoot>
+	<SdkIncludePaths>$(SdkRoot)\glext;$(SdkRoot)\OpenALSoft\include\AL;$(SdkRoot)\FreeType\include;$(SdkRoot)\FreeImage\Source;$(SdkIncludePaths)</SdkIncludePaths>
+	<SdkIncludePaths Condition="'$(Platform)'=='Win32'">$(SdkRoot)\FreeImage\Dist\x32;$(SdkIncludePaths)</SdkIncludePaths>
+	<SdkIncludePaths Condition="'$(Platform)'=='x64'">$(SdkRoot)\FreeImage\Dist\x64;$(SdkIncludePaths)</SdkIncludePaths>
+  </PropertyGroup>
+</Project>

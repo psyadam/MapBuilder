@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D7F1BB5C-FA14-4074-BB37-C2C2E37B541A}</ProjectGuid>
+    <RootNamespace>libmpma</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir>$(SolutionDir)\bin\mpma\$(Platform)$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\intermediate\mpma\$(Platform)$(Configuration)\</IntDir>
+    <IncludePath>$(SdkIncludePaths);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>code\mpma;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>code\mpma;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;_SECURE_SCL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="code\mpma\audio\AL_Include.h" />
+    <ClInclude Include="code\mpma\audio\AL_LockedCalls.h" />
+    <ClInclude Include="code\mpma\audio\Listener.h" />
+    <ClInclude Include="code\mpma\audio\Player.h" />
+    <ClInclude Include="code\mpma\audio\SaveToFile.h" />
+    <ClInclude Include="code\mpma\audio\Source.h" />
+    <ClInclude Include="code\mpma\base\win32\alt_windows.h" />
+    <ClInclude Include="code\mpma\base\Debug.h" />
+    <ClInclude Include="code\mpma\base\DebugRouter.h" />
+    <ClInclude Include="code\mpma\base\win32\evil_windows.h" />
+    <ClInclude Include="code\mpma\base\File.h" />
+    <ClInclude Include="code\mpma\base\Info.h" />
+    <ClInclude Include="code\mpma\base\Locks.h" />
+    <ClInclude Include="code\mpma\base\win32\LocksWin32.h" />
+    <ClInclude Include="code\mpma\base\Memory.h" />
+    <ClInclude Include="code\mpma\base\MiscStuff.h" />
+    <ClInclude Include="code\mpma\base\Profiler.h" />
+    <ClInclude Include="code\mpma\base\ReferenceCount.h" />
+    <ClInclude Include="code\mpma\base\Thread.h" />
+    <ClInclude Include="code\mpma\base\ThreadedTask.h" />
+    <ClInclude Include="code\mpma\base\Timer.h" />
+    <ClInclude Include="code\mpma\base\Types.h" />
+    <ClInclude Include="code\mpma\base\Vary.h" />
+    <ClInclude Include="code\mpma\Config.h" />
+    <ClInclude Include="code\mpma\geo\Geo.h" />
+    <ClInclude Include="code\mpma\geo\GeoBases.h" />
+    <ClInclude Include="code\mpma\geo\GeoInterpolators.h" />
+    <ClInclude Include="code\mpma\geo\GeoIntersect.h" />
+    <ClInclude Include="code\mpma\geo\GeoObjects.h" />
+    <ClInclude Include="code\mpma\gfx\Framebuffer.h" />
+    <ClInclude Include="code\mpma\gfx\Shader.h" />
+    <ClInclude Include="code\mpma\gfx\Texture.h" />
+    <ClInclude Include="code\mpma\gfx\TextWriter.h" />
+    <ClInclude Include="code\mpma\gfx\Vertex.h" />
+    <ClInclude Include="code\mpma\gfxsetup\Extensions.h" />
+    <ClInclude Include="code\mpma\gfxsetup\GFXSetup.h" />
+    <ClInclude Include="code\mpma\gfxsetup\GL.h" />
+    <ClInclude Include="code\mpma\input\GameDevice.h" />
+    <ClInclude Include="code\mpma\input\Keyboard.h" />
+    <ClInclude Include="code\mpma\input\Mouse.h" />
+    <ClInclude Include="code\mpma\input\Unified.h" />
+    <ClInclude Include="code\mpma\input\win32\WrapDInput.h" />
+    <ClInclude Include="code\mpma\net\Common.h" />
+    <ClInclude Include="code\mpma\net\PlatformSockets.h" />
+    <ClInclude Include="code\mpma\net\TCP.h" />
+    <ClInclude Include="code\mpma\net\UDP.h" />
+    <ClInclude Include="code\mpma\net\UPNP.h" />
+    <ClInclude Include="code\mpma\Setup.h" />
+    <ClInclude Include="code\mpma\vr\Hmd.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\mpma\audio\AudioSetup.cpp" />
+    <ClCompile Include="code\mpma\audio\Listener.cpp" />
+    <ClCompile Include="code\mpma\audio\Player.cpp" />
+    <ClCompile Include="code\mpma\audio\SaveToFile.cpp" />
+    <ClCompile Include="code\mpma\audio\Source.cpp" />
+    <ClCompile Include="code\mpma\base\win32\Debug.cpp" />
+    <ClCompile Include="code\mpma\base\DebugRouter.cpp" />
+    <ClCompile Include="code\mpma\base\File.cpp" />
+    <ClCompile Include="code\mpma\base\win32\FileWin32.cpp" />
+    <ClCompile Include="code\mpma\base\Info.cpp" />
+    <ClCompile Include="code\mpma\base\win32\InfoWin32.cpp" />
+    <ClCompile Include="code\mpma\base\Locks.cpp" />
+    <ClCompile Include="code\mpma\base\win32\LocksWin32.cpp" />
+    <ClCompile Include="code\mpma\base\Memory.cpp" />
+    <ClCompile Include="code\mpma\base\MiscStuff.cpp" />
+    <ClCompile Include="code\mpma\base\Profiler.cpp" />
+    <ClCompile Include="code\mpma\base\ReferenceCount.cpp" />
+    <ClCompile Include="code\mpma\base\Thread.cpp" />
+    <ClCompile Include="code\mpma\base\ThreadedTask.cpp" />
+    <ClCompile Include="code\mpma\base\win32\ThreadWin32.cpp" />
+    <ClCompile Include="code\mpma\base\win32\Timer.cpp" />
+    <ClCompile Include="code\mpma\base\Vary.cpp" />
+    <ClCompile Include="code\mpma\geo\Geo.cpp" />
+    <ClCompile Include="code\mpma\geo\GeoIntersect.cpp" />
+    <ClCompile Include="code\mpma\gfx\Framebuffer.cpp" />
+    <ClCompile Include="code\mpma\gfx\Shader.cpp" />
+    <ClCompile Include="code\mpma\gfx\Texture.cpp" />
+    <ClCompile Include="code\mpma\gfx\TextWriter.cpp" />
+    <ClCompile Include="code\mpma\gfx\Vertex.cpp" />
+    <ClCompile Include="code\mpma\gfxsetup\Extensions.cpp" />
+    <ClCompile Include="code\mpma\gfxsetup\win32\ExtensionsWin32.cpp" />
+    <ClCompile Include="code\mpma\gfxsetup\win32\GFXSetupWin32.cpp" />
+    <ClCompile Include="code\mpma\gfxsetup\GL.cpp" />
+    <ClCompile Include="code\mpma\input\GameDevice.cpp" />
+    <ClCompile Include="code\mpma\input\Keyboard.cpp" />
+    <ClCompile Include="code\mpma\input\win32\GameDeviceWin.cpp" />
+    <ClCompile Include="code\mpma\input\win32\KeyboardWin32.cpp" />
+    <ClCompile Include="code\mpma\input\Mouse.cpp" />
+    <ClCompile Include="code\mpma\input\win32\MouseWin32.cpp" />
+    <ClCompile Include="code\mpma\input\Unified.cpp" />
+    <ClCompile Include="code\mpma\input\win32\WrapDInput.cpp" />
+    <ClCompile Include="code\mpma\net\Common.cpp" />
+    <ClCompile Include="code\mpma\net\win32\PlatformSockets.cpp" />
+    <ClCompile Include="code\mpma\net\TCP.cpp" />
+    <ClCompile Include="code\mpma\net\UDP.cpp" />
+    <ClCompile Include="code\mpma\net\UPNP.cpp" />
+    <ClCompile Include="code\mpma\net\win32\WinsockSetup.cpp" />
+    <ClCompile Include="code\mpma\Setup.cpp" />
+    <ClCompile Include="code\mpma\vr\Hmd.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
